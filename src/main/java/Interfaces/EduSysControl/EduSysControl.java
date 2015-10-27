@@ -1,9 +1,9 @@
-package Interfaces;
+package Interfaces.EduSysControl;
 
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
-public interface EdSysControl {
+public interface EduSysControl {
     public void makeACourse();
     public void printCourseInfo();
     public void printCoursesList();

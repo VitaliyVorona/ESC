@@ -1,7 +1,7 @@
 package Impl;
 
-import Interfaces.Course;
-import Interfaces.Person;
+import Interfaces.DAO.Course;
+import Interfaces.DAO.Person;
 
 import java.util.List;
 
