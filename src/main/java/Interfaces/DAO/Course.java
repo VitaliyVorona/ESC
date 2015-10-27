@@ -10,4 +10,7 @@ public interface Course {
     public void getCourseId();
     public void getName();
     public void getDescription();
+    public void changeCourse();
+    public void addStudent();
+    public void deleteStudent();
 }
