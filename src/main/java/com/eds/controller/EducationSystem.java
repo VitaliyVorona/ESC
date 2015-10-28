@@ -1,10 +1,10 @@
-package Interfaces.EduSysControl;
+package com.eds.controller;
 
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
-public interface EduSysControl {
-    public void makeACourse();
+public interface EducationSystem {
+    public void makeACourse(Course course);
     public void printCourseInfo();
     public void printCoursesList();
     public void makeAStudentWithinACourse();
@@ -16,5 +16,6 @@ public interface EduSysControl {
     public void printEducatorInfo();
     public void makeACourseTasks();
     public void quit();
+    public void openSession();
 
 }
