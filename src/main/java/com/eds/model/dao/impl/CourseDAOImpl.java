@@ -16,15 +16,22 @@ public class CourseDAOImpl implements CourseDAO {
     String startDate;
     String endDate;
     Educator educator;
-    List<Student> students;
-    List<Person> persons;
+    List<StudentImpl> students;
+
     public CourseDAOImpl(){
-        students = new ArrayList<Student>();
-        persons = new ArrayList<Person>();
+
+    }
+
+    public CourseDAOImpl(List<StudentImpl> students ){
+        students = new ArrayList<StudentImpl>();
+    }
+
+    public List<Person> getPersons(){
+        return (Person)students;
     }
 
     public String getEducator() {
-        return persons.get(0).toString();
+        return educator.getEducator();
     }
 
     public String getStartDate() {
@@ -33,10 +40,6 @@ public class CourseDAOImpl implements CourseDAO {
 
     public String getEndDate() {
         return endDate;
-    }
-
-    public List<Person> getPersons() {
-        return persons;
     }
 
     public Long getCourseId() {
