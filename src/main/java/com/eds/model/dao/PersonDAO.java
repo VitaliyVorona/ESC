@@ -1,5 +1,6 @@
 package com.eds.model.dao;
 
+import com.eds.model.dao.impl.CourseDAOImpl;
 import com.eds.model.entities.Course;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface PersonDAO {
     public List<Course> getAllCourses();
-    public Long getId();
+    public int getId();
     public String getName();
     public String getSurname();
 

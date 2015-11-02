@@ -9,31 +9,43 @@ import java.util.List;
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
-public class EducatorImpl extends Person {
-    private final String name;
-    private final String surname;
-    private Long id;
+public class EducatorImpl implements PersonDAO {
+    private String name;
+    private String surname;
+    private int id;
 
     public List<Course> getAllCourses() {
         return null;
     }
 
-    public Long getId() {
+    public int getId() {
 
-        return id;
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
 
-        return null;
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
-
-        return null;
+        return this.surname;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
+    public EducatorImpl() {
+    }
 
     public EducatorImpl(String name, String surname) {
         this.name = name;

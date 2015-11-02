@@ -1,5 +1,7 @@
 package com.eds.controller;
 
+import com.eds.model.entities.Course;
+
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
