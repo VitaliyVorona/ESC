@@ -15,22 +15,18 @@ public class EducatorImpl implements PersonDAO {
     private int id;
 
     public List<Course> getAllCourses() {
+
+
         return null;
     }
 
-    public int getId() {
-
-        return this.id;
-    }
+    public int getId() { return this.id; }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-
-        return this.name;
-    }
+    public String getName() { return this.name; }
 
     public void setName(String name) {
         this.name = name;

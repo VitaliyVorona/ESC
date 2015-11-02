@@ -13,59 +13,66 @@ import java.util.List;
  */
 public class CourseDAOImpl implements CourseDAO {
 
-    String startDate;
-    String endDate;
-    Educator educator;
-    List<StudentImpl> students;
+    private String startDate;
+    private String endDate;
+    private Educator educator;
+    private String name;
+    private int id = 0;
+    private String description;
+    List<Person> students;
 
-    public CourseDAOImpl(){
 
+    public CourseDAOImpl(List<Person> students) {
+        students = new ArrayList<Person>();
+        id++;
     }
 
-    public CourseDAOImpl(List<StudentImpl> students ){
-        students = new ArrayList<StudentImpl>();
+    public List<Person> getPersons() {
+        return students;
     }
 
-    public List<Person> getPersons(){
-        return (Person)students;
+    public void printStudens(){
+        List<Person> studentList = getPersons();
+        for (Person student : studentList){
+            System.out.println(student.getName() + student.getSurname());
+        }
     }
 
-    public String getEducator() {
-        return educator.getEducator();
+    public String getEducator() { return educator.getEducator(); }
+
+    public void setEducator(Educator educator){this.educator = educator;}
+
+    public String getEndDate() { return endDate; }
+
+    public String getStartDate() { return startDate; }
+
+    public int getCourseId() { return this.id; }
+
+    public void setCourseId(int id) { this.id = id; }
+
+    public String getName() { return this.name; }
+
+    public String getDescription() { return description; }
+
+    @Override
+    public boolean changeCourse(CourseDAOImpl course, Person student) {
+        course.addStudent(student);
+        if (this.deleteStudent(students.get(student.getId()))) return true;
+        else return false;
     }
 
-    public String getStartDate() {
-        return startDate;
-    }
+    @Override
+    public boolean addStudent(Person person) {
 
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public Long getCourseId() {
-
-        return null;
-    }
-
-    public String getName() {
-
-        return null;
-    }
-
-    public String getDescription() {
-
-        return null;
-    }
-
-    public boolean changeCourse() {
+        students.add(students.size() + 1, person) ;
         return false;
     }
 
-    public boolean addStudent() {
-        return false;
-    }
-
-    public boolean deleteStudent() {
-        return false;
+    public boolean deleteStudent(Person student) {
+        this.students.remove(student.getId());
+        if (students.get(student.getId()) != null){
+            return false;
+        }
+        else return true;
     }
 }
