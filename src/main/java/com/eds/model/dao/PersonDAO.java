@@ -9,7 +9,7 @@ import java.util.List;
  * Created by vitaliy.vorona on 10/27/2015.
  */
 public interface PersonDAO {
-    public List<Course> getAllCourses();
+    public List<CourseDAO> getAllCourses();
     public int getId();
     public String getName();
     public String getSurname();

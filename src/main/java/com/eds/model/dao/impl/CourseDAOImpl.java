@@ -43,16 +43,19 @@ public class CourseDAOImpl implements CourseDAO {
     public void setEducator(Educator educator){this.educator = educator;}
 
     public String getEndDate() { return endDate; }
+    public void setEndDate(String dateEnd) { this.endDate = dateEnd;}
 
     public String getStartDate() { return startDate; }
+    public void setStartDate(String dateStart) { this.endDate = dateStart;}
 
     public int getCourseId() { return this.id; }
-
     public void setCourseId(int id) { this.id = id; }
 
     public String getName() { return this.name; }
+    public void setName(String name){this.name = name;}
 
     public String getDescription() { return description; }
+    public void setDescription(String description) { this.description=description;}
 
     @Override
     public boolean changeCourse(CourseDAOImpl course, Person student) {

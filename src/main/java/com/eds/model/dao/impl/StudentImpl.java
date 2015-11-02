@@ -1,5 +1,6 @@
 package com.eds.model.dao.impl;
 
+import com.eds.model.dao.CourseDAO;
 import com.eds.model.dao.PersonDAO;
 import com.eds.model.entities.Course;
 
@@ -14,34 +15,29 @@ public class StudentImpl implements PersonDAO {
     private String surname;
     private int id = 1;
 
-    public List<Course> getAllCourses() {
-        List<Course> courseDAO = new ArrayList<Course>();
+    public List<CourseDAO> getAllCourses() {
+        List<CourseDAO> courseDAO = new ArrayList<CourseDAO>();
+
         return courseDAO;
     }
 
-    public int getId() {
 
-        return this.id;
+
+    public void printAllCourses(){
+        List<CourseDAO> courseDAO = getAllCourses();
     }
 
+    public int getId() { return this.id; }
     public void setId(int id){
         this.id = id;
     }
 
-    public String getName() {
-
-        return this.name;
-    }
-
+    public String getName() { return this.name; }
     public void setName(String name){
         this.name = name;
     }
 
-    public String getSurname() {
-
-        return this.surname;
-    }
-
+    public String getSurname() { return this.surname; }
     public void setSurname(String surname){
         this.surname = surname;
     }
