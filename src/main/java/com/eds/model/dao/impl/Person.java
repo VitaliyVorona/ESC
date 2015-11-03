@@ -1,7 +1,7 @@
 package com.eds.model.dao.impl;
 
+import com.eds.model.dao.CourseDAO;
 import com.eds.model.dao.PersonDAO;
-import com.eds.model.entities.Course;
 
 import java.util.List;
 
@@ -13,14 +13,15 @@ import java.util.List;
 public abstract class Person implements PersonDAO{
 
     @Override
-    public List<Course> getAllCourses() {
+    public List<CourseDAO> getAllCourses() {
         return null;
     }
 
     @Override
-    public int getId() {
-        return 0;
-    }
+    public int getId() {return 0; }
+
+    @Override
+    public void setId(int id){}
 
     @Override
     public String getName() {
@@ -28,7 +29,11 @@ public abstract class Person implements PersonDAO{
     }
 
     @Override
-    public String getSurname() {
-        return null;
-    }
+    public void setName(String name){}
+
+    @Override
+    public String getSurname() { return null; }
+
+    @Override
+    public void setSurname(String surname){}
 }

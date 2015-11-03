@@ -1,8 +1,6 @@
 package com.eds.model.dao.impl;
 
 import com.eds.model.dao.CourseDAO;
-import com.eds.model.dao.PersonDAO;
-import com.eds.model.entities.Course;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +8,11 @@ import java.util.List;
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
-public class StudentImpl implements PersonDAO {
+public class StudentImpl extends Person {
     private String name;
     private String surname;
-    private int id = 1;
+    static private int instanceCounter = 0;
+    int id = 0;
 
     public List<CourseDAO> getAllCourses() {
         List<CourseDAO> courseDAO = new ArrayList<CourseDAO>();
@@ -42,11 +41,15 @@ public class StudentImpl implements PersonDAO {
         this.surname = surname;
     }
 
-    public StudentImpl(){}
+    public StudentImpl(){
+        instanceCounter++;
+        id = instanceCounter;
+    }
 
     public StudentImpl(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        id++;
+        instanceCounter++;
+        id = instanceCounter;
     }
 }

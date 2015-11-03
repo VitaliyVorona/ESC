@@ -1,15 +1,13 @@
 package com.eds.model.dao.impl;
 
 import com.eds.model.dao.CourseDAO;
-import com.eds.model.dao.PersonDAO;
-import com.eds.model.entities.Course;
 
 import java.util.List;
 
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
-public class EducatorImpl implements PersonDAO {
+public class EducatorImpl extends Person {
     private String name;
     private String surname;
     private int id;

@@ -1,4 +1,4 @@
-package com.eds.model.entities;
+package main.java.com.eds.model.entities;
 
 /**
  * Created by vitaliy.vorona on 10/28/2015.
@@ -22,6 +22,14 @@ public class Student {
 
     public String getSurname() {
         return surname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
 
