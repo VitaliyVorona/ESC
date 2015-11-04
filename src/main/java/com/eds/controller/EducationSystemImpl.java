@@ -3,6 +3,7 @@ package com.eds.controller;
 import com.eds.model.dao.CourseDAO;
 import com.eds.model.dao.db.DB;
 import com.eds.model.dao.impl.CourseDAOImpl;
+import com.eds.model.dao.impl.StudentImpl;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -30,7 +31,6 @@ public class EducationSystemImpl implements EducationSystem{
         System.out.print("Course name: ");
         String courseName = readFromInput(System.in);
         course.setName(courseName);
-        DB.courses.add(course);
         System.out.println("Course description: ");
         String courseDescription = readFromInput(System.in);
         course.setDescription(courseDescription);
@@ -40,6 +40,9 @@ public class EducationSystemImpl implements EducationSystem{
         System.out.println("End date: ");
         String courseEnd = readFromInput(System.in);
         course.setEndDate(courseEnd);
+        DB.courses.add(course);
+        DB.coursesName.add(course.getName());
+        DB.
     }
 
     @Override
@@ -62,8 +65,18 @@ public class EducationSystemImpl implements EducationSystem{
     }
 
     @Override
-    public void makeAStudentWithinACourse() {
+    public void makeAStudentWithinACourse(int courseId) {
+        StudentImpl student = new StudentImpl();
+        System.out.print("Student name: ");
+        String studentName = readFromInput(System.in);
+        student.setName(studentName);
 
+
+        System.out.print("Student surname: ");
+        String studentSurname = readFromInput(System.in);
+        student.setSurname(studentSurname);
+
+        DB.studentsAndTasks.put(student.getId(), DB.coursesName);
     }
 
     @Override

@@ -9,7 +9,7 @@ public interface EducationSystem {
     public void makeACourse();
     public void printCourseInfo(CourseDAO courseDAO);
     public void printCoursesList();
-    public void makeAStudentWithinACourse(CourseDAO course);
+    public void makeAStudentWithinACourse(int i);
     public void makeAnEducatorWithinACourse();
     public void printStudentInfo();
     public void printStudentsListViaCourseId();
