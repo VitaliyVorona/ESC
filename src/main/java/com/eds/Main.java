@@ -36,6 +36,7 @@ public class Main {
         java.setDescription("JAVA for beginners");
         java.addStudent(student, student2, student3);
         System.out.println("=========================");
-        java.printStudens();
+        java.printStudents();
+        System.out.println(java.hashCode());
     }
 }

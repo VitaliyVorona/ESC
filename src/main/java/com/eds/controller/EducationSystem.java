@@ -1,15 +1,15 @@
 package com.eds.controller;
 
-import com.eds.model.entities.Course;
+import com.eds.model.dao.CourseDAO;
 
 /**
  * Created by vitaliy.vorona on 10/27/2015.
  */
 public interface EducationSystem {
-    public void makeACourse(Course course);
-    public void printCourseInfo();
+    public void makeACourse();
+    public void printCourseInfo(CourseDAO courseDAO);
     public void printCoursesList();
-    public void makeAStudentWithinACourse();
+    public void makeAStudentWithinACourse(CourseDAO course);
     public void makeAnEducatorWithinACourse();
     public void printStudentInfo();
     public void printStudentsListViaCourseId();
